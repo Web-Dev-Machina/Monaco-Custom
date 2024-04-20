@@ -1,18 +1,12 @@
-import CodeReader from "./components/CodeReader"
-import CodeEditor from "./components/CodeEditor";
+import Navbar from "./components/Navbar";
+import Main from "./components/Main";
 
 function App() {
 
-  const codeContent = 12345;
-  const codeContent2 = 678910;
-
   return (
     <>
-    <div className="w-52 space-y-5">
-      <CodeEditor/>
-      <CodeReader props={codeContent}/>
-      <CodeReader props={codeContent2}/>
-    </div>
+      <Navbar/>
+      <Main/>
     </>
   )
 }
