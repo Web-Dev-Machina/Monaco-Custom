@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.monaco-editor {
+  border-radius: 10px;
+}
+.overflow-guard {
+  border-radius: 10px;
+}
+.slider {
+  border-radius: 10px;
+}

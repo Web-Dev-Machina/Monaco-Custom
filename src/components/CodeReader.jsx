@@ -1,22 +1,16 @@
-import Editor from '@monaco-editor/react';
+import Editor from "@monaco-editor/react";
 import PropTypes from "prop-types";
 
-const CodeReader = ({props}) => {
-  return <>
-    <Editor
-      className='editor-rounded'
-      theme="vs-dark"
-      height="15rem"
-      width="30rem"
-      defaultLanguage="javascript"
-      defaultValue={`${props}`}
-      options={{readOnly:true, tabIndex:-1, scrollbar:{alwaysConsumeMouseWheel:false}}}
-    />  
-  </>;
+const CodeReader = ({ props }) => {
+  return (
+    <>
+      <Editor theme="vs-dark" height="100%" width="100%" defaultLanguage="javascript" defaultValue={`${props}`} options={{ readOnly: true, tabIndex: -1, scrollbar: { alwaysConsumeMouseWheel: false } }} />
+    </>
+  );
 };
 
-CodeReader.propTypes= {
-  props : PropTypes.any,
-}
+CodeReader.propTypes = {
+  props: PropTypes.any,
+};
 
 export default CodeReader;
