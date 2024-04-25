@@ -3,10 +3,10 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-gray-100 py-2.5">
-        <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between px-4">
+        <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between px-4">
           {/* Navbar Start - Logo */}
           <a href="#" className="flex items-center">
-            <p className="self-center text-xl font-semibold">
+            <p className="mb-1 self-center text-2xl font-semibold">
               <span className="text-purple-800">W</span>eb Ex Machin<span className="text-purple-800">a</span>
             </p>
           </a>
@@ -19,7 +19,7 @@ const Navbar = () => {
 
           {/* Middle Menu List*/}
           <div className="w-full md:flex md:w-auto">
-            <ul className="text-md mt-4 flex flex-col items-center gap-3 md:mt-0 md:flex-row md:gap-0 md:space-x-8">
+            <ul className="text-md mt-2 flex flex-col items-center gap-3 text-lg md:mt-0 md:flex-row md:gap-0 md:space-x-8">
               {/* Responsive Search bar */}
               <li>
                 <div className="relative text-gray-600 md:hidden">
