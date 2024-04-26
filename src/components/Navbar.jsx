@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Navbar = () => {
   //Responsive Menu JS Toggle Logic
   return (
@@ -5,11 +6,11 @@ const Navbar = () => {
       <nav className="bg-gray-100 py-2.5">
         <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between px-4">
           {/* Navbar Start - Logo */}
-          <a href="#" className="flex items-center">
-            <p className="mb-1 self-center text-2xl font-semibold">
+          <Link to="/">
+            <p className="self-center text-xl font-semibold lg:text-2xl">
               <span className="text-purple-800">W</span>eb Ex Machin<span className="text-purple-800">a</span>
             </p>
-          </a>
+          </Link>
           {/* Responsive hidden hamburguer menu*/}
           <button type="button" className="rounded-full bg-white p-3 text-gray-500 md:hidden">
             <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -18,11 +19,11 @@ const Navbar = () => {
           </button>
 
           {/* Middle Menu List*/}
-          <div className="w-full md:flex md:w-auto">
-            <ul className="text-md mt-2 flex flex-col items-center gap-3 text-lg md:mt-0 md:flex-row md:gap-0 md:space-x-8">
+          <div className="w-full font-sans md:flex md:w-auto">
+            <ul className="text-md mt-2 flex flex-col items-center gap-3 md:mt-0 md:flex-row md:gap-0 md:space-x-8 lg:text-lg">
               {/* Responsive Search bar */}
-              <li>
-                <div className="relative text-gray-600 md:hidden">
+              <li className="md:hidden">
+                <div className="relative text-gray-600">
                   <input type="search" name="serch" placeholder="Search" className="text-md h-10 rounded-full bg-white  pl-6 pr-12 focus:outline-none"></input>
                   <button type="submit" className="absolute right-0 top-0 mr-4 mt-3">
                     <svg className="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" xmlSpace="preserve" width="512px" height="512px">
@@ -32,24 +33,24 @@ const Navbar = () => {
                 </div>
               </li>
               <li>
-                <a href="#" className="py-2 pl-3 pr-4 text-gray-700 md:p-0">
+                <Link to="/" className="py-2 pl-3 pr-4 text-gray-700 md:p-0">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="py-2 pl-3 pr-4 text-gray-700 md:p-0">
+                <Link to="/about" className="py-2 pl-3 pr-4 text-gray-700 md:p-0">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="py-2 pl-3 pr-4 text-gray-700 md:p-0">
+                <Link to="/javascript" className="py-2 pl-3 pr-4 text-gray-700 md:p-0">
                   Javascript
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="py-2 pl-3 pr-4 text-gray-700 md:p-0">
+                <Link to="/contact" className="mx-auto py-2 pl-3 pr-4 text-gray-700 md:p-0">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
