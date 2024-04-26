@@ -16,9 +16,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/about" element={<About />} />
-          <Route path="/javascript" element={<Javascript />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
+          {/* Use "/*" at the end of the parent or it will not go deeper */}
+          <Route path="/javascript/*" element={<Javascript />} />
         </Routes>
 
         <Footer />
