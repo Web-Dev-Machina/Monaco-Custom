@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* monaco editor customized */
 .monaco-editor {
   border-radius: 10px;
 }
@@ -10,4 +10,32 @@
 }
 .slider {
   border-radius: 10px;
+}
+/* NavLink active URL */
+.active {
+  color: rgb(197, 102, 34);
+}
+
+.animated-background {
+  background: url("grid.png") repeat 0 0;
+  animation: bg-animated 5s infinite linear;
+}
+@keyframes bg-animated {
+  100% {
+    background-position: 0 -26px; /* img width is 26px */
+  }
+}
+
+.animated-text {
+  transform: translateY(100%);
+  animation: text-animated 145s linear infinite;
+}
+
+@keyframes text-animated {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
 }

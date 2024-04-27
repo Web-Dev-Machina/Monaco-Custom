@@ -1,27 +1,28 @@
-import { Routes, Route, Link } from "react-router-dom";
-import JSIntro from "../pages/javascript/JSIntro";
-import Page2 from "../pages/javascript/Page2";
-import Page3 from "../pages/javascript/Page3";
+import SidebarLogic from "../pages/javascript/grid/SidebarLogic";
+import MainSection from "../pages/javascript/grid/MainSection";
+import EndAnimation from "../pages/javascript/grid/EndAnimation";
 const Javascript = () => {
   return (
     <>
-      <section className="mx-auto grid h-96 max-w-screen-2xl grid-cols-12">
-        {/* Sidebar nav */}
-        <aside className="col-span-2 bg-green-500 p-4">
-          <Link to="">Página 1</Link> {/* Link to self */}
-          <Link to="page2">Página 2</Link>
-          <Link to="page3">Página 3</Link>
+      {/* Grid */}
+      <section className="mx-auto grid h-96 max-w-[1920px] grid-cols-12">
+        <aside className="col-span-2 flex flex-col border-gray-300 bg-purple-100 p-4 text-black shadow-inner">
+          <p className="mb-2 text-xl font-bold">JS Tutorial</p>
+          <ul>
+            <SidebarLogic /> {/* Left Sidebar Link map logic */}
+          </ul>
         </aside>
-        {/* Components changing by file selection in sidebar */}
-        <article className="col-span-8 h-[1000px] bg-red-500 p-4">
-          <Routes>
-            <Route index element={<JSIntro />} />
-            <Route path="page2" element={<Page2 />} />
-            <Route path="page3" element={<Page3 />} />
-          </Routes>
-        </article>
-        {/* End Sidebar */}
-        <aside className="col-span-2 bg-purple-500 p-4">End</aside>
+
+        <section className="col-span-8 h-96 bg-purple-50 p-4 shadow-inner">
+          <MainSection /> {/* Middle Section Routes map logic */}
+        </section>
+        <aside className="animated-background col-span-2 overflow-hidden border-gray-300 bg-purple-500 shadow-inner">
+          {" "}
+          {/* .animated-background */}
+          <div className="h-full w-full bg-purple-100 text-center opacity-70">
+            <EndAnimation /> {/* Text Animation Right Sidebar */}
+          </div>
+        </aside>
       </section>
     </>
   );
