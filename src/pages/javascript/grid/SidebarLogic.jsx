@@ -3,16 +3,16 @@ import { NavLink } from "react-router-dom";
 const SidebarLogic = () => {
   const routes = [
     { name: "JS Introducción", path: "" },
-    { name: "Página2", path: "page2" },
-    { name: "Página3", path: "page3" },
+    { name: "Web Geolocation API", path: "page2" },
+    { name: "JS Number Properties", path: "page3" },
   ];
   const routeLinks = routes.map((route, index) => (
-    <li key={index} className="flex gap-1 hover:bg-green-900">
-      <img src="js-logo.svg" />
-      <NavLink to={route.path} end>
+    <NavLink key={index} to={route.path} end>
+      <li className="flex gap-1 py-1.5 pl-1 hover:bg-green-900">
+        <img src="js-logo.svg" />
         {route.name}
-      </NavLink>
-    </li>
+      </li>
+    </NavLink>
   ));
   return <>{routeLinks}</>;
 };

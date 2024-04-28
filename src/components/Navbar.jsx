@@ -19,7 +19,7 @@ const Navbar = () => {
           </button>
 
           {/* Middle Menu List*/}
-          <div className="w-full font-sans md:flex md:w-auto">
+          <div className="hidden w-full font-sans md:flex md:w-auto">
             <ul className="text-md mt-2 flex flex-col items-center gap-3 md:mt-0 md:flex-row md:gap-0 md:space-x-8 lg:text-lg ">
               {/* Responsive Search bar */}
               <li className="md:hidden">
